@@ -1,0 +1,23 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: JWT demo
+
+jwt:
+  config:
+    # 128 bit - en hex format => String of 16 characters / Hex of 32 characters
+    # TODO: don't expose the secret in clear in a properties file
+    secret: "645267556A586E3272357538782F413F"
+    issuer: http://localhost:8080
+    subject: demo-jwt-client
+    audicence:
+      - https://localhost:8080
+    expiration-mils: 3600000
+
+logging:
+  level:
+    root: INFO
+    org.springframework.web: INFO
+    org.springframework.security: DEBUG

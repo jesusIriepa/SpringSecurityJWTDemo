@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: TEST JWT demo
+
+jwt:
+  config:
+    # 128 bit - base64
+    secret: "614E645267556B58703273357638792F"
+    issuer: http://testhost:8080
+    subject: demo-jwt-client
+    audicence:
+      - https://testhost:8080
+    expiration-mils: 3600000
